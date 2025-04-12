@@ -1,0 +1,9 @@
+torch
+transformers
+librosa
+soundfile
+pydub
+numpy
+openai
+zhipuai
+unsloth
