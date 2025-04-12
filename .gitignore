@@ -2,7 +2,6 @@ __pycache__/
 results2/
 eval_result.xlsx
 train_test_data_split/
-depression_instances
 audio_clips
 audio_lanzhou_2015/
 e-daic-decompressed/
