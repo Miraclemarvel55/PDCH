@@ -54,7 +54,7 @@ else:
 text_with_emotion_setting = "text_with_audio_emotion" if args.is_text_with_audio_emotion else "text_wo_audio_emotion"
 modals = "-".join(args.modals)
 # save result dir
-save_dir = Path(args.save_base_dir)/args.scale/args.dataset/model_short_name/modals"/args.train_status/repeat_id/text_with_emotion_setting/bin_name/subset_name
+save_dir = Path(args.save_base_dir)/args.scale/args.dataset/model_short_name/modals/args.train_status/repeat_id/text_with_emotion_setting/bin_name/subset_name
 save_dir.mkdir(exist_ok=True, parents=True)
 args.save_dir = save_dir
 

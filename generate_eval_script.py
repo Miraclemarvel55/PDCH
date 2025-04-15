@@ -75,7 +75,6 @@ command_lines.append("# lora model with specific dataset and fold_id")
 models = list(Path("Llama-3.1-8B-Instruct-lora").glob("fold-*/*/*/checkpoint-*"))
 models.extend(list(Path("Qwen2.5-7B-Instruct-lora").glob("fold-*/*/*/checkpoint-*")))
 models = sorted(models)
-models = [model for model in models if "总" in str(model)]
 force_update = True
 for ix, model in enumerate(models):
     CUDA_VISIBLE_DEVICES = "0,1,2,4" if ix<len(models)//2 else "5,6,7,9"

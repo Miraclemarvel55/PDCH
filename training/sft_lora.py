@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser()
 # add params
 parser.add_argument('--cuda', type=str, default="0")
 parser.add_argument('--data_source_path', type=str,
-                    default="/mnt/userdata/hf_home/AudioAI/train_test_data_split/总字词数/small/train_fold-0.json")
+                    default="../train_test_data_split/总字词数/small/train_fold-0.json")
 parser.add_argument('--model_path', type=str, default="meta-llama/Llama-3.1-8B-Instruct")
 # parse params
 args = parser.parse_args()
@@ -23,7 +23,7 @@ if qwen2_5_7b_instruct in args.model_path:
 elif llama_3_1_8b_instruct in args.model_path:
     generation_prefix = "<|start_header_id|>assistant<|end_header_id|>\n\n"
     base_model_short_name = llama_3_1_8b_instruct
-output_dir = f"/mnt/userdata/hf_home/AudioAI/{base_model_short_name}-lora/{fold_id}/{bin_name}/{subset_name}"
+output_dir = f"{base_model_short_name}-lora/{fold_id}/{bin_name}/{subset_name}"
 print(args)
 print(output_dir)
 Path(output_dir).mkdir(exist_ok=True, parents=True)

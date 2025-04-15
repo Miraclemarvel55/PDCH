@@ -66,7 +66,7 @@ pip install -r requirements.txt
 ### Basic Command
 
 ```bash
-python evaluate.py \
+python eval_generate.py \
     --model_name_or_path <model_name> \
     --modals <modalities> \
     --data_source_path <path_to_data>
